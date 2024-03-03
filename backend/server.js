@@ -4,14 +4,20 @@ import authRouter from "./routes/authRouter.js";
 import mongoConnect from "./mongo_connect/mongoConnect.js";
 
 dotenv.config();
+
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+app.use(express.json());
+app.use("/api/auth", authRouter);
+
+
 
 app.get("/", (req, res) => {
   res.send("hellow world");
 });
 
-app.use("/api/auth", authRouter);
+
 
 app.listen(PORT, () => {
   mongoConnect();
