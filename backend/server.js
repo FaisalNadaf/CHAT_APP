@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+
 import authRouter from "./routes/authRouter.js";
 import mongoConnect from "./mongo_connect/mongoConnect.js";
 
@@ -13,9 +14,9 @@ app.use("/api/auth", authRouter);
 
 
 
-app.get("/", (req, res) => {
-  res.send("hellow world");
-});
+// app.get("/", (req, res) => {
+//   res.send("hellow world");
+// });
 
 
 
