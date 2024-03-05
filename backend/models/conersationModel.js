@@ -8,7 +8,7 @@ const conversionSchema = new mongoose.Schema(
         red: "User",
       },
     ],
-    message: [
+    messages: [
       {
         type: mongoose.Schema.Types.ObjectId,
         red: "Message",
