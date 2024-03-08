@@ -5,13 +5,13 @@ const conversionSchema = new mongoose.Schema(
     participants: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        red: "User",
+        ref: "User",
       },
     ],
     messages: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        red: "Message",
+        ref: "Message",
         default: [],
       },
     ],
